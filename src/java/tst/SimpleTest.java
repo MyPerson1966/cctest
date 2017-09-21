@@ -6,8 +6,6 @@
 package tst;
 
 import javax.ejb.Stateless;
-import javax.faces.bean.ManagedBean;
-import javax.faces.bean.RequestScoped;
 import javax.inject.Named;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -20,14 +18,16 @@ import javax.persistence.PersistenceContext;
 @Stateless
 public class SimpleTest {
 
- @PersistenceContext
- private EntityManager em;
+    @PersistenceContext
+    private EntityManager em;
+
     /**
      * Creates a new instance of SimpleTest
      */
     public SimpleTest() {
+	superString = "" + ((int) (1000 * Math.random())) + "-" + ((int) (1000 * Math.random())) + "-" + ((int) (1000 * Math.random())) + "";
     }
-    
+
     private String superString;
 
     /**
@@ -36,7 +36,7 @@ public class SimpleTest {
      * @return the value of superString
      */
     public String getSuperString() {
-        return superString;
+	return superString;
     }
 
     private double b;
@@ -47,7 +47,7 @@ public class SimpleTest {
      * @return the value of b
      */
     public double getB() {
-        return b;
+	return b;
     }
 
     /**
@@ -56,7 +56,7 @@ public class SimpleTest {
      * @param b new value of b
      */
     public void setB(double b) {
-        this.b = b;
+	this.b = b;
     }
 
     /**
@@ -65,7 +65,7 @@ public class SimpleTest {
      * @param superString new value of superString
      */
     public void setSuperString(String superString) {
-        this.superString = superString;
+	this.superString = superString;
     }
 
     private double a;
@@ -76,7 +76,7 @@ public class SimpleTest {
      * @return the value of a
      */
     public double getA() {
-        return a;
+	return a;
     }
 
     /**
@@ -85,17 +85,19 @@ public class SimpleTest {
      * @param a new value of a
      */
     public void setA(double a) {
-        this.a = a;
+	this.a = a;
     }
 
-    public void actIT(){
-        System.out.println(superString+"   "+a);
+    public void actIT() {
+	System.out.println(superString + "   " + a);
     }
-    public void actITT(){
-        System.out.println( " ---------------  "+ (a*b) );
+
+    public void actITT() {
+	System.out.println(" ---------------  " + (a * b));
     }
-    public void acctITT(Double f){
-        System.out.println( " ---------------  "+ (f+a*b) );
+
+    public void acctITT(Double f) {
+	System.out.println(" ---------------  " + (f + a * b));
     }
-    
+
 }
