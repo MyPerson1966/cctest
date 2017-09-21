@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ezcomp="http://xmlns.jcp.org/jsf/composite/ezcomp">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+       
+        <h:form> 
+            a:
+            <h:inputText id="vv" value="#{simpleTest.a}" />
+            superString
+            <h:inputText id="ss" value="#{simpleTest.superString}"/>
+            <h:commandButton value="ACT" action="#{simpleTest.actIT()}" />
+            
+        </h:form>
+        <hr />
+        <h:form>
+            <ezcomp:out A="#{simpleTest.a}"  B="#{simpleTest.b}" 
+                        act="#{simpleTest.acctITT(2.5)}" />
+        </h:form>
+        
+        
+        
+        
+        
+        
+        
+    </h:body>
+</html>
+
