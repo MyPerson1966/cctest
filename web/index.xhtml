@@ -7,7 +7,7 @@
         <title>Facelet Title</title>
     </h:head>
     <h:body>
-       
+        <h2>
         <h:form> 
             a:
             <h:inputText id="vv" value="#{simpleTest.a}" />
@@ -16,7 +16,9 @@
             <h:commandButton value="ACT" action="#{simpleTest.actIT()}" />
             
         </h:form>
-        <hr />
+        </h2>
+     <hr />
+        
         <h:form>
             <ezcomp:out A="#{simpleTest.a}"  B="#{simpleTest.b}" 
                         act="#{simpleTest.acctITT(2.5)}" />
